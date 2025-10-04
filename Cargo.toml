@@ -1,0 +1,26 @@
+[package]
+name = "event-stream"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+
+
+[dependencies]
+alloy = { version = "1.0.13", features = [
+    "full",
+    "json-rpc",
+    "node-bindings",
+    "rpc-client",
+    "rpc-types-debug",
+    "rpc-types-trace",
+] }
+
+# async
+futures-util = "0.3"
+tokio = { version = "1.45", features = ["macros", "rt-multi-thread"] }
+
+# misc
+eyre = "0.6"
+serde = "1.0"
+serde_json = "1.0"
+dotenv = "0.15"
